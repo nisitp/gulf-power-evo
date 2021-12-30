@@ -1,0 +1,4 @@
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Angular, Breakpoint, jQuery, Font Awesome, Foundation, Foundation Sites, Magnific Popup, Modernizr, Singularity, Slick Carousel
+  Software: Coda 2, Atom, Beanstalk, OS X El Capitan, Gulp, Sass, Browser-Sync

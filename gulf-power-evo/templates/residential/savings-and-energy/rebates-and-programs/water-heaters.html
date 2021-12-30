@@ -1,0 +1,63 @@
+<section class="content-section basic-content-layout-2 page-promotional-introduction-disabled">
+  <h2>Upgrade From Gas to Electric and Get a FREE Water Heater!</h2>
+  <div>
+    <section class="text-section">
+      <p>We might take ready access to hot water for granted. But our power bill doesn&apos;t &mdash; water heaters are the second largest consumer of energy in your home, behind your heating and cooling system.</p>
+      <p>With new electric or <a href="/residential/savings-and-energy/rebates-and-programs/heating-and-cooling/geothermal-heat-pump">geothermal</a> water heaters, however, you can cut your energy costs significantly and save money. A family of four can have all the hot water they need for about $30 per month. We&apos;ll even upgrade you from a gas to an electric water heater &mdash; for FREE.</p>
+    </section>
+
+    <section class="text-section">
+      <h3>Convert to Electric Now</h3>
+      <p>Ready to save money and upgrade from gas to a free electric water heater? Call us at <a  href="tel::18776554001">1-877-655-4001</a> to find out more, or <a href="#water-heater-contact-request-form" class="jump-link">submit your contact information below</a> and we&apos;ll call you.</p>
+    </section>
+  </div>
+</section>
+
+<section id="water-heater-contact-request-form" class="contact-form three-field-form water-heater-contact-request-form">
+  <div class="content-region" ng-hide="hideAfterValidSubmit">
+    <h2>Water Heater Contact Request</h2>
+    <p>To request information about replacing your water heater, please fill out this form.</p>
+    <p>One of our representatives will contact you soon.</p>
+    <form name="waterHeaterContactRequestForm" id="WaterHeaterMoreInfo" method="post" ng-submit="submitForm(waterHeaterContactRequestForm.$valid, waterHeaterContactRequestForm)" novalidate>
+      <label>
+        <span class="title">Name<span ng-show="
+          waterHeaterContactRequestForm.customer_name.$invalid
+          && waterHeaterContactRequestForm.customer_name.$error.required != true
+          && waterHeaterContactRequestForm.$submitted
+        ">Invalid</span><span ng-show="
+          waterHeaterContactRequestForm.customer_name.$error.required
+          && waterHeaterContactRequestForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="customer_name" placeholder="Name" ng-model="customer_name" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+      </label>
+      <label class="middle-field">
+        <span class="title">Email<span ng-show="
+          waterHeaterContactRequestForm.email_address.$invalid
+          && waterHeaterContactRequestForm.email_address.$error.required != true
+          && waterHeaterContactRequestForm.$submitted
+        ">Invalid</span><span ng-show="
+          waterHeaterContactRequestForm.email_address.$error.required
+          && waterHeaterContactRequestForm.$submitted
+        ">Required</span></span>
+        <input type="email" name="email_address" placeholder="Email Address" ng-model="email_address" ng-required="true">
+      </label>
+      <label class="final-field">
+        <span class="title">Phone<span ng-show="
+          waterHeaterContactRequestForm.phone_number.$error.required
+          && waterHeaterContactRequestForm.$submitted
+        ">Required</span></span>
+        <input type="tel" name="phone_number" placeholder="Phone" ng-model="phone_number" ng-required="true">
+      </label>
+      <button role="button">Submit</button>
+    </form>
+  </div>
+ 	<div class="fade-in content-region callout success" ng-show="thanksMessage" ng-bind-html="thanksMessage">{{ thanksMessage }}</div>
+</section>
+
+<ng-include src="'templates/shared/testimonial.html'"
+  ng-init="testimonialID = 2"
+></ng-include>
+
+<ng-include src="'templates/shared/programs-and-rebates.html'"
+  ng-init="withIDs = [14, 13, 20];hideViewAllLink = false;"
+></ng-include>

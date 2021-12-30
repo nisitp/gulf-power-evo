@@ -1,0 +1,272 @@
+$bgPath: '/images/banners/';
+$adsPath: '/images/background-images/';
+
+.standard-banner {
+  // FPO
+  // background-image: url('/images/living-room.jpg');
+
+  .outages-landing-page & {
+    background-image: url($bgPath + 'Banner_Outages.jpg');
+  }
+
+  // ----- Residential -----
+  .residential-home.landing-page & {
+    background-image: url($bgPath + 'Banner_Res_SaveMoneyAndEnergy.jpg');
+  }
+
+  .appliances & {
+    background-image: url($bgPath + 'Banner_Res_Appliances.jpg');
+  }
+
+  .earth-cents & {
+    background-image: url($bgPath + 'Banner_Res_EarthCents_Homes.jpg');
+  }
+
+  .energycheckup & {
+    background-image: url($bgPath + 'Banner_Res_EnergyCheckup.jpg');
+  }
+
+  .heating-and-cooling &,
+  .heat-pumps-home & {
+    background-image: url($bgPath + 'Banner_Res_HeatingCooling.jpg');
+  }
+
+  .insulation-envelope-and-ducts & {
+    background-image: url($bgPath + 'Banner_Res_Insulation_Envelope_Ducts.jpg');
+  }
+
+  .smart-energy & {
+    background-image: url($bgPath + 'Banner_Res_SmartEnergy.jpg');
+  }
+
+  .rebates-and-programs-home &,
+  .find-a-CheckMe-contractor & {
+    background-image: url($bgPath + 'Banner_Res_Rebates_Programs.jpg');
+  }
+
+  .electric-vehicles-home & {
+    background-image: url($bgPath + 'Banner_Res_ElectricVehicles.jpg');
+  }
+
+  .energy-select & {
+    background-image: url($bgPath + 'Banner_Res_EnergySelect.jpg');
+  }
+  .energy-select-request-more-info & {
+    background-image: url($bgPath + 'Banner_Res_RequestMoreInfo.jpg' );
+  }
+  .energy-select-help-center &,
+	.energy-select-support-and-faqs &, 
+	.business-care-center-contact-us & {
+    background-image: url($bgPath + 'Banner_Res_EnergySelectHelp.jpg' );
+  }
+	
+  .outdoor-lighting-home & {
+    background-image: url($bgPath + 'Banner_Res_OutdoorLighting.jpg');
+  }
+
+  .pool-pumps & {
+    background-image: url($bgPath + 'Banner_Res_PoolPumps_Heating.jpg');
+  }
+
+  .roofing & {
+    background-image: url($bgPath + 'Banner_Res_Roofing.jpg');
+  }
+
+  .solar &,
+  .solar-energy-share & {
+    background-image: url($bgPath + 'Banner_Res_Solar.jpg');
+  }
+
+  .surge-protection-home &,
+	.basic-signup &,
+	.premium-signup & {
+    background-image: url($bgPath + 'Banner_Res_SurgeProtection.jpg');
+  }
+
+  .water-heaters & {
+    background-image: url($bgPath + 'Banner_Res_WaterHeaters.jpg');
+  }
+
+  .savings-tips-and-tools & {
+    background-image: url($bgPath + 'Banner_Res_SavingsTipsAndTools.jpg');
+  }
+
+  // this applies to the whole section, not just one page
+  .rates-and-billing-section & {
+    background-image: url($bgPath + 'Banner_Res_RatesAndBilling.jpg');
+  }
+
+  .windows & {
+    background-image: url($bgPath + 'Banner_Res_Windows.jpg');
+  }
+
+  // ----- Business -----
+  .business-savings-tips-and-tools & {
+    background-image: url($bgPath + 'Banner_Bus_SavingsTipsAndTools.jpg');
+  }
+
+  .grow-your-business & {
+    background-image: url($bgPath + 'Banner_Bus_GrowYourBusiness.jpg');
+  }
+
+  .business-heating-and-cooling & {
+    background-image: url($bgPath + 'Banner_Bus_HVAC.jpg');
+  }
+
+  .insulation & {
+    background-image: url($bgPath + 'Banner_Bus_Insulation.jpg');
+  }
+
+  .job-creation-rate-incentive & {
+    background-image: url($bgPath + 'Banner_Bus_JobCreation.jpg');
+  }
+
+  .business-rebates-and-programs & {
+    background-image: url($bgPath + 'Banner_Bus_SaveMoney.jpg');
+  }
+
+  .business-home & {
+    background-image: url($bgPath + 'Banner_Bus_SaveMoneyAndEnergy.jpg');
+  }
+
+  .why-do-business-in-nw-florida & {
+    background-image: url($bgPath + 'Banner_Bus_WhyDoBusiness.jpg');
+  }
+
+  .business-rates-and-billing & {
+    background-image: url($bgPath + 'Banner_Bus_RatesAndBilling.jpg');
+  }
+
+  .business-understanding-your-bill & {
+    background-image: url($bgPath + 'Banner_Bus_RatesAndBilling.jpg');
+  }
+
+  .bus-rates-rules-and-regulations & {
+    background-image: url($bgPath + 'Banner_Bus_RatesAndBilling.jpg');
+  }
+
+  .developers & {
+    background-image: url($bgPath + 'Banner_Bus_Developers.jpg');
+  }
+
+  .energy-checkup & {
+    background-image: url($bgPath + 'Banner_Bus_EnergyCheckup.jpg');
+  }
+
+  .outdoor-lighting & {
+    background-image: url($bgPath + 'Banner_Bus_OutdoorLighting.jpg');
+  }
+
+  .report-an-outage & {
+    background-image: url($bgPath + 'Banner_Bus_OutdoorLighting.jpg');
+  }
+
+  .commercial-surge-protection & {
+    background-image: url($bgPath + 'Banner_Bus_SurgeProtection.jpg');
+  }
+
+  .commercial-surge-protection-signup & {
+    background-image: url($bgPath + 'Banner_Bus_SurgeProtection.jpg');
+  }
+
+  .business-roofing & {
+    background-image: url($bgPath + 'Banner_Bus_Roof.jpg');
+  }
+
+  .business-solar-energy & {
+    background-image: url($bgPath + 'Banner_Bus_SolarEnergy.jpg');
+  }
+
+  // ----- About Us -----
+  .about-us-home-page & {
+    background-image: url($bgPath + 'Banner_AboutUs.jpg');
+  }
+
+	.investing-in-the-future & {
+		background-image: url($bgPath + 'Banner_AboutUs_InvestingInTheFuture.jpg');
+	}
+	
+  .careers &,
+  .in-spanish & {
+    background: {
+      image: url($bgPath + 'Banner_AboutUs_Careers.jpg');
+      position: center top;
+    }
+  }
+
+  .education-and-workforce-development & {
+    background-image: url($bgPath + 'Banner_AboutUs_Education.jpg');
+  }
+
+  .our-company &,
+	.find-career-development-programs & {
+    background-image: url($bgPath + 'Banner_AboutUs_CareerDevelopment.jpg');
+  }
+
+  .solar-for-schools & {
+    background-image: url($bgPath + 'Banner_AboutUs_SolarForSchools.jpg');
+  }
+
+  .stem-education-resources & {
+    background-image: url($bgPath + 'Banner_AboutUs_STEMEducationResources.jpg');
+  }
+
+  .in-the-community & {
+    background-image: url($bgPath + 'Banner_AboutUs_InTheCommunity.jpg');
+  }
+
+  .plant-crist-scrubber &, .ccr-rule & {
+    background-image: url($bgPath + 'Banner_AboutUs_PlantCristScrubber.jpg');
+  }
+
+  /*.our-company &,*/
+  .working-with-us &,
+  .supplier-registration & {
+    background-image: url($bgPath + 'Banner_AboutUs_OurCompany.jpg');
+  }
+
+  .safety &,
+  .safety-city &,
+  .rights-of-way & {
+    background-image: url($bgPath + 'Banner_AboutUs_Safety.jpg');
+  }
+  .design-a-light & {
+    background-image: url($bgPath + 'Banner_Bus_DesignALight.jpg');
+  }
+}
+
+.with-power-lines {
+  background-image: url('/images/power-lines.jpg');
+}
+
+// .advert{
+//   &.paperless-billing {
+//     background-image: url($adsPath + 'banner-Background-Paperless.jpg') !important;
+//   }
+//
+//   &.energy-assistance {
+//     background-image: url($adsPath + 'banner-background-energy-assistance.jpg');
+//   }
+// }
+
+// Resources
+.template .resources,
+.rebates-and-programs-home .resources {
+  background-image: url($adsPath + 'Resources_Res_Rebates_Programs.jpg');
+}
+
+.stem-education-resources .resources {
+  background-image: url($adsPath + 'Ad_STEMEducationResources.jpg');
+}
+
+.solar.section-residential .resources {
+  background-image: url($adsPath + 'Resources_Res_Solar.jpg');
+}
+
+.home .safety-tip.major-cta-section {
+  background-image: url($adsPath + 'Banner_Homepage_SafetyTips.jpg');
+}
+
+.helpful-websites-section {
+  background-image: url('/images/background-images/Resources_Res_Solar.jpg');
+}

@@ -1,0 +1,82 @@
+<div class="content-section content-decorative-image-combo">
+  <div>
+    <section class="text-section basic-section">
+      <div>
+        <h2>Energy Checkup</h2>
+        <h3>Get a Checkup and Create Your Plan to Save</h3>
+        <p>We offer two free Energy Checkup options that will help you understand your home&apos;s energy use: online and in person. As part of your Energy Checkup, you&apos;ll receive personalized recommendations and tips on how to save energy and money.</p>
+      </div>
+    </section>
+
+    <section class="image-section">
+      <img class="decorative-photograph" src="/images/illustrations/residential/Image_Res_EnergyCheckup_1.png" alt="Lady holding paperwork">
+    </section>
+  </div>
+</div>
+
+<ng-include src="'templates/shared/testimonial.html'"
+  ng-init="testimonialID = 2"
+></ng-include>
+
+<div class="content-section basic-content-layout-1 personalized-report">
+  <div>
+    <h2>Personalized Online Report</h2>
+    <section class="text-section">
+      <p>Take the first steps to savings now! Log in to Energy Checkup and receive a report that&apos;s personalized for you, based on your home&apos;s actual energy use.</p>
+      <a href="https://customerservice.southerncompany.com/NonSecure/LoginFrames.aspx?ReturnUrl=%2fHBAAccountList.aspx" rel="external" class="button">Learn More</a>
+    </section>
+  </div>
+</div>
+
+<section id="contact-form" class="contact-form three-field-form">
+  <div class="content-region" ng-hide="hideAfterValidSubmit">
+    <h2>Contact Us to Schedule Your Free Energy Checkup</h2>
+    <p>Enter your information below to schedule an appointment and one of our energy experts will come into your home, assess your energy use, and offer money saving suggestions.</p>
+    <form name="energyCheckupContactForm" method="post" id="energycheckup" ng-submit="submitForm(energyCheckupContactForm.$valid, energyCheckupContactForm)" novalidate>
+      <label>
+        <span class="title">Name * <span ng-show="
+          energyCheckupContactForm.first_name.$invalid
+          && energyCheckupContactForm.first_name.$error.required != true
+          && energyCheckupContactForm.$submitted
+        ">Invalid</span><span ng-show="
+          energyCheckupContactForm.first_name.$error.required
+          && energyCheckupContactForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="first_name" placeholder="Name" ng-model="first_name" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+      </label>
+      <label class="middle-field">
+        <span class="title">Phone Number * <span ng-show="
+          energyCheckupContactForm.phone_number.$invalid
+          && energyCheckupContactForm.phone_number.$error.required != true
+          && energyCheckupContactForm.$submitted
+        ">Invalid</span><span ng-show="
+          energyCheckupContactForm.phone_number.$error.required
+          && energyCheckupContactForm.$submitted
+        ">Required</span></span>
+        <input type="tel" name="phone_number" placeholder="Phone Number" ng-model="phone_number" ng-required="true">
+      </label>
+      <label class="final-field">
+        <span class="title">Email Address * <span ng-show="
+          energyCheckupContactForm.email_address.$invalid
+          && energyCheckupContactForm.email_address.$error.required != true
+          && energyCheckupContactForm.$submitted
+        ">Invalid</span><span ng-show="
+          energyCheckupContactForm.email_address.$error.required
+          && energyCheckupContactForm.$submitted
+        ">Required</span></span>
+        <input type="email" name="email_address" placeholder="Email Address" ng-model="email_address" ng-required="true">
+      </label>
+      <button role="button">Submit</button>
+    </form>
+    <p>For more information, call <a href="tel::18776554001">1-877-655-4001</a> or <a href="#contact-form" class="jump-link">Contact Us</a></p>
+  </div>
+	<div class="fade-in content-region callout success" ng-show="thanksMessage" ng-bind-html="thanksMessage">{{ thanksMessage }}</div>
+</section>
+
+<ng-include src="'templates/shared/testimonial.html'"
+  ng-init="testimonialID = 2"
+></ng-include>
+
+<ng-include src="'templates/shared/programs-and-rebates.html'"
+  ng-init="withIDs = [13, 9, 15];hideViewAllLink=false;"
+></ng-include>

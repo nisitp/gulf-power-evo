@@ -1,0 +1,33 @@
+{
+  "name": "gulf-power",
+  "version": "0.0.2",
+  "private": "true",
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "singularity": "^1.7.0",
+    "breakpoint-sass": "^2.7.0"
+  },
+  "devDependencies": {
+    "singularity": "^1.7.0",
+    "breakpoint-sass": "^2.7.0",
+    "magnific-popup": "^1.1.0",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "fastclick": "^1.0.6",
+    "font-awesome": "^4.6.3",
+    "foundation": "^5.5.3",
+    "foundation-sites": "^6.2.3",
+    "jquery": "^3.1.0",
+    "jquery-placeholder": "^2.3.1",
+    "jquery.cookie": "^1.4.1",
+    "modernizr": "^3.3.1",
+    "sassy-maps": "^0.4.0",
+    "what-input": "^3.0.0",
+    "angular-sanitize": "^1.5.8",
+    "matchHeight": "^0.7.0",
+    "slick-carousel": "^1.6.0",
+    "flexslider": "^2.6.3",
+    "backgroundpos": "kbwood/backgroundpos#^1.1.1",
+    "jQuery-rwdImageMaps": "*"
+  }
+}

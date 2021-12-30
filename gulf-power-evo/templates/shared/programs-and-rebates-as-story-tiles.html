@@ -1,0 +1,15 @@
+<div class="content-section story-tiles layout-1">
+  <div>
+    <h2 ng-if="headerTitle" ng-bind="headerTitle"></h2>
+    <div class="tiles">
+      <div class="story-tile" ng-repeat="programRebate in neededProgramsAndRebates(programsAndRebates, withIDs)">
+        <img ng-src="{{programRebate.headerPath}}" alt="story-tile-fpo">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title" ng-bind-html="programRebate.name"></h3>
+          <p ng-bind-html="programRebate.description"></p>
+          <a href="{{programRebate.pageUrl}}" class="detour-link">Read More</a>
+        </div> <!-- .story-tile-content -->
+      </div> <!-- .story-tile -->
+    </div> <!-- .tiles -->
+  </div>
+</div> <!-- .content-section .story-tiles .layout-1 -->

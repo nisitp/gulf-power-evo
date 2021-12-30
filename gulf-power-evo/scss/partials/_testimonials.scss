@@ -1,0 +1,338 @@
+.content-section.testimonials {
+  display: none;
+}
+
+// Testimonials
+%quotationMarks {
+  background: {
+    image: url('/images/testimonial-quotation-mark.png');
+    position: center center;
+    size: contain, 100% 100%;
+    repeat: no-repeat;
+  }
+  content: '';
+  display: block;
+  height: 50px;
+  margin-bottom: 30px;
+  width: 50px;
+
+  @include breakpoint($tiny) {
+    height: 35px;
+    margin-bottom: 15px;
+    width: 35px;
+  }
+}
+
+.testimonial {
+  background-color: $blue-background;
+  overflow: hidden;
+  padding-bottom: 45px;
+  position: relative;
+
+  @include breakpoint($regular) {
+    margin-top: 40px !important;
+    padding-bottom: 0;
+  }
+
+  &:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  &.layout-2 {
+    .witness-portrait-container {
+      background: {
+        image: url('/images/carpenter-background.jpg');
+        position: 42.5% 0;
+        repeat: no-repeat;
+        size: 400% auto;
+      }
+
+      @include breakpoint($tiny) {
+        background-size: 200% auto;
+      }
+
+      @include breakpoint($regular) {
+        background-size: 125% auto;
+      }
+
+      .witness-portrait {
+        margin-bottom: 30px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+
+        @include breakpoint($tiny) {
+          padding-top: 20px;
+        }
+
+        @include breakpoint($regular) {
+          margin-bottom: 0;
+          text-align: left;
+        }
+
+        img {
+          position: relative;
+          bottom: -65px;
+          max-width: 275px;
+          width: 75%;
+          z-index: 1;
+
+          @include breakpoint($tiny) {
+            bottom: 0;
+            width: 45%;
+            background: {
+              position: center center;
+              size: cover;
+            }
+          }
+
+          @include breakpoint($regular) {
+            left: 15%;
+            width: 20%;
+          }
+
+          @include breakpoint($wide) {
+            left: 20%;
+          }
+
+          @include breakpoint($very-wide) {
+            left: 22.5%;
+          }
+        }
+
+        &::before {
+          background: {
+            image: url('/images/Header_Wide_Ribbon_Reversed.png');
+            position: bottom left;
+            repeat: no-repeat;
+            size: cover;
+          }
+          content: '';
+          display: inline-block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: 0;
+
+          margin-left: -45px;
+          width: 382.5px / 400px * 100%;
+
+          @include breakpoint($tiny) {
+            margin-left: -120px;
+            width: 495px;
+          }
+
+          @include breakpoint($tiny) {
+            margin-left: -95px;
+            width: 620px;
+          }
+
+          @include breakpoint($thin) {
+            margin-left: -230px;
+            width: 880px;
+          }
+
+          @include breakpoint($regular) {
+            margin: auto;
+            width: 100%;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+
+  &.layout-1 {
+    @include shadow();
+    padding: 0;
+    position: relative;
+
+    background: {
+      image: url('/images/left-ribbons.png'), url('/images/mom-and-son.png'), url('/images/right-ribbons.png'), url('/images/mom-and-son-background.jpg');
+      position: -33.5rem center, 72.5% 0, right -250px center, bottom right;
+      repeat: no-repeat;
+      size: cover, cover, cover, cover;
+    }
+
+    @include breakpoint($thin) {
+      background:{
+        position: -350px center, 72.5% 0, right -100px center, bottom right;
+        size: contain, 1000px, contain, cover;
+      }
+    }
+
+    @include breakpoint($regular) {
+      background-position: -100px center, 10% 0, right -75px center, bottom right;
+      height: 385px;
+    }
+    h1 {
+      font-size: 24px;
+
+      @include breakpoint($thin) {
+        font-size: 36px;
+      }
+    }
+    .content p::before {
+      margin-bottom: 15px;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .testimonials-content-container {
+    @include breakpoint($regular) {
+      @include container();
+      display: table;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .content {
+    margin: 50px auto 150px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    text-align: left;
+  }
+
+  .content > p:first-of-type, .witness-name {
+    font-size: 18px;
+    line-height: 34px;
+
+    @include breakpoint($thin) {
+      font-size: 24px;
+    }
+
+    @include breakpoint($regular) {
+      padding-left: 50px;
+    }
+  }
+
+  .content > p:first-of-type::before {
+    @extend %quotationMarks;
+
+    @include breakpoint($regular) {
+      margin-bottom: 0;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  > p:last-of-type::after {
+    @extend %quotationMarks;
+    background-image: url('/images/reversed-testimonial-quotation-mark.png');
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+
+    @include breakpoint($regular) {
+      bottom: 0;
+    }
+  }
+
+  .testimonials-content-container {
+    overflow-x: hidden;
+
+    @include breakpoint($regular) {
+      display: table;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 200px;
+      right: 0;
+      width: 450px;
+    }
+
+    @include breakpoint($wide) {
+      left: 275px;
+      width: 500px;
+    }
+  }
+
+  .content {
+    @extend %bright-links;
+
+    @include breakpoint($regular) {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &::before {
+      @extend %quotationMarks;
+    }
+
+    p {
+      color: #fff;
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .witness-name {
+      font-size: 18px;
+      margin: 30px 0 15px;
+
+      @include breakpoint($thin) {
+        font-size: 24px;
+      }
+    }
+
+    .witness-location {
+      font-size: 16px;
+    }
+
+    a {
+      @include breakpoint($regular) {
+        font-size: 16px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.carpenter-testimonial {
+  .content {
+    position: relative;
+
+    &::after {
+      @extend %quotationMarks;
+
+      transform: rotate(180deg);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @include breakpoint($regular) {
+        right: 17.5%;
+      }
+
+      @include breakpoint($wide) {
+        right: 12.5%;
+      }
+
+      @include breakpoint($very-wide) {
+        right: 7.5%;
+      }
+    }
+  }
+}

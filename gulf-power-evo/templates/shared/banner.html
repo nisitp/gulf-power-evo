@@ -1,0 +1,12 @@
+<section ng-repeat="data in bannerData" ng-if="data.id == bannerDataID" class="advert detail-section major-cta-section" ng-style="{'background-image': data.imagePath}">
+  <div>
+    <h5 ng-bind-html="data.title" class="asdf{{getRandomSpan()}}"></h5>
+    <p ng-bind-html="data.description"></p>
+    <a
+      class="detour-link"
+      ng-if="data.linksTo"
+      ng-href="{{data.linksTo}}"
+      ng-attr-target="{{data.shouldOpenWithNewTab ? '_blank' : ''}}"
+      ng-bind="data.linkText"></a>
+  </div>
+</section>

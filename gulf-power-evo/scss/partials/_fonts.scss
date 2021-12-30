@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'OCC-1';
+  src: url("/fonts/OCC-1.eot");
+  src: url("/fonts/OCC-1.eot") format("embedded-opentype"),
+       url("/fonts/OCC-1.woff") format("woff"),
+       url("/fonts/OCC-1.ttf") format("truetype"),
+       url("/fonts/OCC-1.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/fonts/FontAwesome.eot");
+  src: url("/fonts/FontAwesome.svg") format("embedded-opentype"),
+       url("/fonts/FontAwesome.ttf") format("woff"),
+       url("/fonts/FontAwesome.woff") format("truetype"),
+       url("/fonts/FontAwesome.woff2") format("svg");
+}

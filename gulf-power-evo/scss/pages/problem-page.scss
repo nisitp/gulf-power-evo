@@ -1,0 +1,16 @@
+@import "../init";
+@import "../partials/base";
+
+body {
+  background-color: $silver;
+}
+
+.banner { display: none !important; }
+.message {
+  padding: 25px;
+}
+
+.detour-link {
+  padding-bottom: 25px;
+  text-align: center;
+}

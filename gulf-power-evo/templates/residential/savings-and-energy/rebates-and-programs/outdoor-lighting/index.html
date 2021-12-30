@@ -1,0 +1,243 @@
+<div class="content-section basic-content-layout-2">
+  <h2>Lighting Makes All the Difference</h2>
+  <div>
+    <section class="text-section basic-section">
+      <div>
+        <p>Don&apos;t settle for a poorly-lit driveway or yard. Outdoor lighting helps you see where you&apos;re going at night, allows your children to play outside longer, and provides additional security by deterring would-be intruders.</p>
+        <p>We offer a number of energy efficient outdoor lighting solutions that make your home safer while also enhancing its curb appeal. And we&apos;ll even take care of the installation and maintenance of your lighting for you.</p>
+      </div>
+    </section>
+
+    <section class="image-section">
+      <img src="/images/illustrations/residential/Image_Res_OutdoorLighting_1.png" alt="Illustration of outdoor lighting">
+    </section>
+  </div>
+</div>
+
+<div class="content-section story-tiles layout-2">
+  <div>
+    <div class="tiles">
+      <div class="story-tile">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title">Benefits of Gulf Power Outdoor Lighting</h3>
+          <p>We want to be your full-service partner for lighting design, product selection, installation, and maintenance on your project. We offer: </p>
+          <ul>
+            <li>Professional lighting expertise at no charge</li>
+            <li>A wide selection of light fixtures and poles from top manufacturers</li>
+            <li>Purchase and lease options </li>
+            <li>Maintenance included with lease; maintenance contract option with purchase</li>
+          </ul>
+          <p>To learn more, <a href="#lighting-expert-contact-form" class="jump-link">contact one of our Outdoor Lighting Experts</a>.</p>
+        </div>
+      </div>
+
+      <div class="story-tile">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title">Why Choose LED Lighting</h3>
+          <p>Light Emitting Diode (LED) lighting is available for select street and area lighting applications.</p>
+          <p>LED outdoor lighting benefits include:</p>
+          <ul>
+            <li>Enhanced lighting quality</li>
+            <li>Energy efficient</li>
+            <li>Long fixture life</li>
+            <li>Reduced maintenance requirements</li>
+            <li>Environmentally friendly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section content-decorative-image-combo">
+  <div>
+    <section class="text-section basic-section">
+      <div>
+        <h2>Design-A-Light</h2>
+        <p>Ready to design a lighting look for your home? Try our interactive tool to see what we offer.</p>
+        <a href="{{currentPath}}/design-a-light" class="detour-link">Start Designing</a>
+      </div>
+    </section>
+
+    <section class="image-section">
+      <img class="decorative-photograph image-style-1" src="/images/illustrations/residential/Image_Res_OutdoorLighting_2.png" alt="Many lamps">
+    </section>
+  </div>
+</div>
+
+<ng-include src="'templates/shared/testimonial.html'"
+  ng-init="testimonialID = 2"
+></ng-include>
+
+<section class="contact-form" id="contact-form">
+  <div class="content-region" ng-hide="hideAfterValidSubmit">
+    <h2>Contact an Outdoor Lighting Expert</h2>
+    <p class="callout">Have a light in need of repair? <a href="/residential/savings-and-energy/rebates-and-programs/outdoor-lighting/report-an-outage">Use our tool to report an outage</a>.</p>
+    <p>For all other inquiries:</p>
+    <form method="post" name="outdoorLightingForm" id="OutdoorLighting" ng-submit="submitForm(outdoorLightingForm.$valid, outdoorLightingForm)" novalidate>
+      <label>
+        <span class="title">Contact Name * <span ng-show="
+          outdoorLightingForm.contactName.$invalid
+          && outdoorLightingForm.contactName.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.contactName.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="contactName" placeholder="Name" ng-pattern="/[a-zA-Z-\s]+/" ng-model="contactName" ng-required="true">
+      </label>
+      <label>
+        <span class="title">Email Address * <span ng-show="
+          outdoorLightingForm.email.$invalid
+          && outdoorLightingForm.email.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.email.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <input type="email" name="email" placeholder="Email Address" ng-model="email" ng-required="true">
+      </label>
+      <label>
+        <span class="title">Type of Light</span>
+        <select name="custtype" ng-model="custtype">
+          <option value="Residential" selected>Residential</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Industrial">Industrial</option>
+          <option value="Government">Governmental</option>
+        </select>
+      </label>
+      <label>
+        <span class="title">Type of Inquiry</span>
+        <select name="bttcy" ng-model="bttcy">
+          <option value="General" selected>General Inquiry</option>
+    			<option value="New Light">New Light</option>
+    			<option value="Upgrade">Upgrade</option>
+    			<option value="Free Lighting Analysis">Free Lighting Analysis</option>
+    			<option value="Other">Other</option>
+        </select>
+      </label>
+      <label>
+        <span class="title">Company</span>
+        <input type="text" name="company" ng-model="company" placeholder="Company">
+      </label>
+      <label>
+        <span class="title">Phone</span>
+        <input type="text" name="phone" ng-model="phone" placeholder="Phone Number">
+      </label>
+      <label>
+        <span class="title">Address * <span ng-show="
+          outdoorLightingForm.address1.$invalid
+          && outdoorLightingForm.address1.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.address1.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="address1" ng-model="address1" placeholder="Address Line 1" ng-required="true">
+      </label>
+      <label>
+        <span class="title">Address (Line 2)</span>
+        <input type="text" name="address2" ng-model="address2" placeholder="Address (Line 2)">
+      </label>
+      <label>
+        <span class="title">City * <span ng-show="
+          outdoorLightingForm.city.$invalid
+          && outdoorLightingForm.city.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.city.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="city" placeholder="City" ng-model="city" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+      </label>
+      <label>
+        <span class="title">State * <span ng-show="
+          outdoorLightingForm.state.$invalid
+          && outdoorLightingForm.state.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.state.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <select name="state" ng-model="state" ng-required="true">
+          <option value="FL" selected>Florida</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DC">District of Columbia</option>
+          <option value="DE">Delaware</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </label>
+      <label>
+        <span class="title">ZIP Code * <span ng-show="
+         outdoorLightingForm.zip.$invalid
+          && outdoorLightingForm.zip.$error.required != true
+          && outdoorLightingForm.$submitted
+        ">Invalid</span><span ng-show="
+          outdoorLightingForm.zip.$error.required
+          && outdoorLightingForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="zip" placeholder="ZIP Code" ng-model="zip" ng-pattern="/^\d{5}(?:[-\s]\d{4})?$/" ng-required="true">
+      </label>
+      <label>
+        <span class="title">Gulf Power Account Number</span>
+        <input type="text" name="gulfaccount" placeholder="#### - ####" ng-model="gulfaccount">
+      </label>
+      <label class="message">
+        <span class="title">How can we help you? <span ng-show="outdoorLightingForm.notes.$invalid && outdoorLightingForm.$submitted">(Please shorten your message)</span></span>
+        <textarea name="notes" rows="8" cols="40" placeholder="Message" ng-model="notes" ng-focus="expandHeight($event)" ng-blur="collapseHeight($event)" ng-maxlength="400"></textarea>
+      </label>
+      <button role="button" type="submit">Submit</button>
+    </form>
+  </div>
+	<div class="fade-in content-region callout success" ng-show="thanksMessage" ng-bind-html="thanksMessage">{{ thanksMessage }}</div>
+</section>
+
+<ng-include src="'templates/shared/programs-and-rebates.html'"
+  ng-init="withIDs = [20, 18, 17];hideViewAllLink=false;"
+></ng-include>

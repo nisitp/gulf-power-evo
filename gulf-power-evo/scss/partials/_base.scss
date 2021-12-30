@@ -1,0 +1,181 @@
+h1, h2, h3, h4, h5, h6, header {
+  color: $blue;
+  margin-bottom: 15px;
+}
+
+h2, h3, h4 {
+  color: $grey;
+}
+
+p, li {
+  color: $text-grey;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+// Sections
+body > section {
+  @include grid-span(11, 1.5);
+  clear: both;
+  float: none;
+}
+
+.text-section {
+  float: none;
+  margin: {
+    top: 30px;
+    bottom: 10px;
+  }
+
+  > a {
+    display: block;
+    padding: 15px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+
+  @include breakpoint($thin) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+
+  @include breakpoint($thin) {
+    font-size: 24px;
+  }
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.full-width {
+  // Override Singularity and make the element full-width
+  margin: 0;
+  width: 100%;
+
+  .container {
+    @include container();
+  }
+}
+
+// Links
+a {
+  color: $red;
+  font: {
+    size: 16px;
+    weight: 700;
+  }
+  text-transform: uppercase;
+  transition: color 150ms;
+
+  &:hover, &:focus, &:active {
+    color: $red;
+  }
+}
+
+%bright-links {
+  a {
+    color: #fff;
+  }
+}
+
+%tinted-links {
+  a, a:hover, a:focus, a:active {
+    color: $blue;
+  }
+}
+
+.fa {
+  margin: 0 10px;
+}
+
+main a[href*="customerservice.southernco"],
+main a[href*="customerservice2.southernco"],
+.detour-link,
+.download-link,
+.expansion-link {
+  display: inline-block;
+  text-decoration: none;
+
+  &::before, &::after {
+    font: {
+      family: 'FontAwesome';
+      size: 20px;
+      weight: 800;
+    }
+    vertical-align: baseline;
+  }
+
+  &::before {
+    margin-right: 0.75rem;
+  }
+
+  &::after {
+    margin-left: 0.75rem;
+  }
+}
+
+// Those Before
+.download-link::before {
+  content: '\f019';
+  font-size: 14pt;
+}
+
+// Those After
+// :not(.regular-link)
+main a[href*="customerservice.southernco"]::after,
+main a[href*="customerservice2.southernco"]::after,
+.detour-link::after {
+  content: '\f105';
+}
+
+.expansion-link::after {
+  content: '+';
+}
+.introduction.open .expansion-link::after,
+.expansion-link.expanded::after {
+  content: '-';
+}
+
+a.regular-link::after { margin-left:0 !important; content:'\00a0' !important; display:none; }
+a.regular-link:hover { text-decoration: underline; }
+
+
+// ANIMATION [ link transitions ]
+/*a,*/ %social-links a:hover {
+	transition: 250ms ease-out;
+}
+
+// ANIMATION [ fade in ]
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1s ease-in 1; /* Safari 4+ */
+  -moz-animation:    fade-in 1s ease-in 1; /* Fx 5+ */
+  -o-animation:      fade-in 1s ease-in 1; /* Opera 12+ */
+  animation:         fade-in 1s ease-in 1; /* IE 10+, Fx 29+ */
+}
+

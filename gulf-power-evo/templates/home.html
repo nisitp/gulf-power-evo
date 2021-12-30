@@ -1,0 +1,89 @@
+<div class="row-1">
+  <div class="authentication-section">
+    <h2><span class="fa fa-lock"></span>Log in to Your Account</h2>
+    <a class="button" role="button" href="https://customerservice2.southerncompany.com/Login?mnuOpco=gulf">Get Started</a>
+    <div class="authentication-note">
+      <h4>Need an Account?</h4>
+      <p>Create a login to manage your account, pay your bills, and more.</p>
+      <a href="https://customerservice.southerncompany.com/NonSecure/LoginFrames.aspx?ReturnUrl=%2fMyAccount.aspx%3flogin%3dtrue&login=true" class="detour-link">Register Now</a>
+      <a href="https://customerservice2.southerncompany.com/CustService/FindAnOffice?mnuOpco=gulf" class="detour-link">Convenient payment locations</a>
+    </div> <!-- .authentication-note -->
+  </div> <!-- .authentication-section -->
+
+  <div class="residential-banner-container home-page-banner-container residential-related-content">
+    <section class="clearfix residential-banner home-page-banner">
+      <div class="clearfix content-container">
+        <div class="headline"><h1>Featured<span>Homeowner Testimonial</span></h1></div>
+		  <p>&ldquo;<em>The Energy Checkup provided by Gulf Power proved to be invaluable. The AC company reviewed the recommendations on the checkup and installed the proper size AC unit for our home.</em>&rdquo;</p>
+        <h6>&mdash;John Telhiard</h6>
+        <h6>Gulf Power Customer</h6>
+        <h6 class="location-name">Pensacola, FL</h6>
+
+        <a href="/residential/savings-and-energy/rebates-and-programs/energy-checkup" class="button">Learn More</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="business-banner-container home-page-banner-container business-related-content">
+    <section class="clearfix business-banner home-page-banner">
+      <div class="clearfix content-container">
+        <div class="headline"><h1>Featured<span>Small Business</span></h1></div>
+        <h6>GS Gelato</h6>
+        <h6 class="location-name">Fort Walton Beach, FL</h6>
+        <p>Milk, sugar, electricity. GS Gelato relies on Gulf Power to churn out over a million gallons of gelato each year.</p>
+        <a href="http://www.gulfpowernews.com/gulf-power-supplies-critical-ingredient-reliable-energy-gs-gelato/" class="button">Read More</a>
+      </div>
+    </section>
+  </div>
+</div> <!-- .row-1 -->
+
+<div class="forecast-container" ng-if="displayForecast">
+  <section class="forecast-section">
+    <div class="location-and-degrees">
+      <h4 class="degrees">
+        <span ng-bind="tempurature"></span><span class="degree-symbol">&deg;</span>
+      </h4>
+      <p class="location" ng-bind="weatherCityName"></p>
+      <p class="date" ng-bind="forecastDateTime"></p>
+    </div> <!-- .location-and-degrees -->
+    <div class="icon-and-name">
+      <img ng-src="/images/home/{{forecastIconFilename}}.png" alt="Sun icon">
+      <p ng-bind="forecastName"></p>
+    </div> <!-- .icon-and-name -->
+    <p ng-bind-html="forecastPromo"></p>
+    <a href="{{forecastLink}}" class="detour-link">Read More</a>
+  </section> <!-- .forecast-section -->
+  <!--//<p class="attribution">Weather information provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a>.</p>//-->
+</div> <!-- .forecast-container -->
+
+
+<div class="business-related-content">
+  <ng-include src="'templates/shared/programs-and-rebates.html'" ng-init="
+    withIDs = [34, 35, 24];
+    hideHeaderTitle = true;
+    hideViewAllLink = false;
+  "></ng-include>
+</div>
+<div class="residential-related-content">
+  <ng-include ng-controller="AppController" src="'templates/shared/programs-and-rebates.html'" ng-init="
+    withIDs = [14, 12, 13, 99, 98, 18];
+    hideHeaderTitle = true;
+    hideViewAllLink = false;
+  "></ng-include>
+</div>
+
+
+
+
+<div class="tweets-container">
+  <div class="content-region">
+    <div>
+      <div id="tweetsHere"></div>
+      <span class="tweets-nav direction-nav"><a href="#" class="nav-prev">&lt;</a><a href="#" class="nav-next">&gt;</a></span>
+    </div>
+  </div>
+</div>
+
+<ng-include src="'templates/shared/safety-tips.html'" ng-init="tipIDs = [1, 2, 3, 4, 5]"></ng-include>
+
+<!--//<script src="/js/home.js"></script>//-->

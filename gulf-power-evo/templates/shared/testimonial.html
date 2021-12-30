@@ -1,0 +1,32 @@
+<!-- These are going to be hidden until we get content for them -->
+<div class="content-section testimonials" ng-repeat="testimonial in testimonials">
+  <section
+  class="testimonial full-width layout-2"
+  ng-if="testimonial.type == 'business' && testimonial.id == testimonialID">
+    <div class="witness-portrait-container">
+      <div class="witness-portrait">
+        <img src="images/energy-select/carpenter.png" alt="Photograph of a carpenter">
+      </div>
+    </div>
+    <div class="testimonials-content-container">
+      <div class="content">
+        <p ng-bind-html="testimonial.claim"></p>
+        <p class="witness-name"><strong><em ng-bind-html="'- ' + testimonial.customerName + ','"></em></strong></p>
+        <p class="witness-location" ng-bind-html="testimonial.customerLocation"></p>
+        <a ng-href="linksTo" class="detour-link">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="content-section testimonial layout-1 full-width linkless"
+    ng-if="testimonial.type == 'residential' && testimonial.id == testimonialID">
+    <div class="testimonials-content-container">
+      <div class="content">
+        <h1 ng-bind-html="testimonial.title"></h1>
+        <p ng-bind-html="testimonial.claim"></p>
+        <p class="witness-name"><strong><em ng-bind-html="'- ' + testimonial.customerName + ', ' + testimonial.customerQuality"></em></strong></p>
+      </div>
+    </div>
+  </section>
+</div>

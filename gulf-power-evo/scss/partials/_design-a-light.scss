@@ -1,0 +1,414 @@
+/* **************************************************************************************************** */
+/* design a light tool */
+
+/* alternate banners */
+
+.design-a-light {
+  .banner {
+    margin-bottom: 50px; 
+  }
+  #design-a-light-content {
+    display: block;
+    overflow: hidden; 
+    min-height: 680px; 
+  }
+  #design-a-light .zone.zone-header-image {
+  	display: block;
+  }
+  #design-a-light .zone.zone-header-image h1 {
+  	border: none;
+  	color: #ffffff;
+  	text-shadow: 5px 5px 5px rgba(0,0,0,.6);
+  	position: absolute; top: 70px; margin-left: 40px;
+  }
+
+  #design-a-light .zone-no-headline {
+  	position: relative;
+  	top: -70px;
+  }
+  
+  
+  .intro-content {
+    @include breakpoint($tablet) { @include grid-span(3, 1, 6); }    
+    @include breakpoint($desktop) { @include grid-span(5, 1, 12); }
+  }
+  #scene-switch-buttons {
+    @include breakpoint($tablet) { @include grid-span(3, 1, 6); }
+    @include breakpoint($desktop) { @include grid-span(5, 1, 12); }
+    
+    clear: both !important; 
+    .scene-switcher {
+      @include cols(4, $mobile-only, 3);          
+      @include cols(2, $tablet-only, 3);      
+      @include cols(4, $desktop, 5);
+      margin-bottom: 20px; 
+    	display: block;
+      img {width: 100%; height: auto;}
+    }
+  }
+
+
+
+
+  &.DisplayBackground-Park #dal-tool-container{background-image: url(/images/design-a-light/backgrounds/DisplayBackground_Park.jpg);}
+  &.DisplayBackground-ParkingLot #dal-tool-container{background-image: url(/images/design-a-light/backgrounds/DisplayBackground_ParkingLot.jpg);}
+  &.DisplayBackground-Residential #dal-tool-container{background-image: url(/images/design-a-light/backgrounds/DisplayBackground_Residential.jpg);}
+  &.DisplayBackground-Retail #dal-tool-container{background-image: url(/images/design-a-light/backgrounds/DisplayBackground_Retail.jpg);}  
+  
+    
+  
+  
+
+  #dal-tool-container {
+    @include breakpoint($mobile-only) { margin-bottom: 40px; height: 500px; padding-top: 30px; }
+    @include breakpoint($tablet) {
+    	position: absolute;
+    	top: 0px; right: 0px; 
+      @include grid-span( 3, 4, 6); height: 675px; padding-top: 10%; 
+    }
+    @include breakpoint($desktop) { @include grid-span(7, 6, 12); padding-top: 5%; }
+
+  	background-color: gray; background-position: center center; background-size: cover; 
+    background-image: url(/images/design-a-light/backgrounds/DisplayBackground_Park.jpg);
+    overflow: hidden; 
+    img { @include breakpoint($mobile-only) { max-width: 320px; } }
+    
+
+  
+
+
+
+    .carousel {
+      
+      li img {
+        width: 410px; height: auto; margin: auto;
+        @include breakpoint($mobile-only) { width: 100%; }
+      }
+      &#fixtures-carousel .carousel-navigation{top: 40px;}
+      &#poles-carousel .carousel-navigation{
+        top: 180px;
+        @include breakpoint($mobile-only) { top: 40px; }
+      }
+    }
+
+    .carousel-navigation {
+      position:relative; z-index: 100; width: 80%; left: 10%;
+      @include breakpoint($mobile-only) { width: 70%; left: 15%; }
+      .prev, .next {
+      	width: 60px;
+      	height: 60px;
+      	line-height: 60px; 
+      	vertical-align: middle; 
+      	text-decoration: none; 
+      	border-radius: 100%; 
+      	position: absolute;
+      	top: 60px;
+      	background: white;
+      	@include breakpoint($mobile-only) {
+        	width: 30px; height: 30px; line-height: 30px; 
+      	}
+      	&:before {
+          color: $blue; 
+          font-family: 'FontAwesome';
+          display: block; width: 100%; height: 100%; text-align: center; 
+          font-size: 70px; line-height: 60px; 
+          @include breakpoint($mobile-only) { font-size: 35px; line-height: 30px; }
+      	}
+      }
+      
+      .prev {
+        &:before {
+          content: '\f137'; 
+        }
+      }
+      .next {
+        &:before {
+          content: '\f138'; 
+        }
+      }
+
+    }
+    
+
+    
+
+
+    .flexslider {
+    	-webkit-box-shadow: none !important;
+    	-moz-box-shadow: none !important;
+    	-ms-box-shadow: none !important;
+    	-o-box-shadow: none !important;
+    	box-shadow: none !important;
+      background: transparent; border: transparent; margin: 0px;
+
+
+/*
+// the white line below the fixture image in the DAL tool.
+      &.fixtures {
+        &:after {
+          content: '.'; font-size: 0px; 
+          display: block; height: 3px; background: white; 
+          margin: auto; 
+          width: 160px;
+          @include breakpoint($desktop) { width: 280px; }
+        }
+      }
+*/
+    	&.poles {
+      	box-shadow: none;
+      }
+      .slides {padding-left: 0px; margin-left: -100%;}
+      .slides li {margin: 0px;}
+      .flex-control-paging {
+      	display: none;
+      }
+
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+  #your-items-container { padding-top: 20px; }
+
+
+
+  .product-image-container { 
+    width: 100%; border-bottom: 2px solid #efefef; 
+    img { width: auto; height: auto; margin: auto; float: none; display: block; }
+  }
+  .product-info-container {
+    padding: 15px; 
+    
+  	* { text-align: center; }
+  	h3, p { margin-bottom: 10px; }
+  	.add-remove {
+    	padding-bottom: 40px; 
+    	.added-message, .remove-item { display: none; }
+  	  .fav-add { display: none; }
+  	  a { clear: both; display: block; width: 100%; }
+  	}
+  }
+	.product.checked {
+  	.add-item { display: none; }
+  	.added-message, .remove-item { display: block; }
+	}
+
+
+
+
+
+  .descriptions-container {
+    clear: both; 
+    &#fixtures-descriptions {
+      .product-image-container {
+        padding-top: 20px; 
+      }
+    }
+    .slick-slider {
+      width: 100%; margin-bottom: 50px; 
+      @include breakpoint($tablet) { width: calc(100% + 30px);}
+      .slick-track { padding: 0; margin: 0px; }
+      .slick-slide { @include breakpoint($tablet) { margin-right: 30px; } }
+      .slick-dots { bottom: -60px; }
+    }
+    .product {
+    	cursor: pointer;
+    	outline-offset: -2px; 
+    	outline: 2px solid #efefef; 
+    	position: relative; 
+    	&.active-product {
+      	outline: 2px solid $blue; 
+        .selected { visibility: visible; }
+      }
+      .selected {
+      	color: #ffffff; font-size: 14px; line-height: 30px; font-weight: bold; text-transform: uppercase; 
+      	background: $blue;
+      	position: absolute; right: 0px; top: 0px; 
+      	display: inline; float: right; 
+      	visibility: hidden;
+      	padding: 0px 20px; 
+      }
+    }
+/*
+    .direction-nav {
+      display: block; width: 60%; margin: 0px auto 120px auto; float: none; 
+      .nav-prev {
+        float: left; 
+      }
+      .nav-next {
+        float: right; 
+      }
+    }
+*/
+  }
+
+
+
+
+/*
+  .descriptions-container .product .product-image-container {	width: 40%;	height: 100%; text-align: center; float: left; }
+  .descriptions-container .product .product-info-container {	width: 60%;	height: 100%; float: left; }
+*/
+
+/*
+  .descriptions-container#fixtures-descriptions .product .product-image-container .product-image { max-width: 147px; }
+  .descriptions-container .product .product-image-container .product-image { width: auto; height: auto; max-height: 227px; }
+*/
+  
+/*
+  .descriptions-container .product .product-name { margin-top: 15px; }
+  .descriptions-container .product .watts { margin-top: 10px; }
+  .descriptions-container .product .fav-add { margin-top: 50px; margin-right: 10px; }
+*/
+  #your-items-container {
+    margin-bottom: 80px;     
+  }
+  #saved-items-container {
+    #saved-items {
+      .saved-item {
+        margin-bottom: 30px; 
+      	outline-offset: -2px; 
+      	outline: 2px solid #efefef; 
+      	padding: 0;
+        @include cols(3, $tablet-only, 6);  	
+        @include cols(4, $desktop, 12);
+        padding: 0px 20px 20px; 
+        &.fixture {
+          .product-image-container {
+            padding-top: 10%; 
+          }
+        }
+        .product-image-container {
+          height: 195px; position: relative; 
+        }
+        img { width: auto; height: 100%; margin: auto; display: block; float: none; }
+        p, h3 { text-align: center; }
+        .remove-this-item {
+          display: none; 
+        }
+        .remove-this-item-link {
+          display: block; width: 100%; text-align: center; 
+        }
+      }
+    }
+  }
+
+  #saved-items-container #saved-items ul li.saved-item { width: 100%; position: relative; margin-bottom: 0px; padding-top: 10px;}
+
+  #saved-items-container #saved-items ul li.saved-item:nth-child(odd) {
+  	background-color: #e1e1e1;
+  }
+
+  #saved-items-container #saved-items ul li.saved-item img.saved-item-image { float: left; }
+  	#saved-items-container #saved-items ul li.saved-item.fixture img.saved-item-image { width: 70px; height: auto; position: absolute;}
+  	#saved-items-container #saved-items ul li.saved-item.pole img.saved-item-image { height: 100px; width: auto; margin-left: 20px;}
+
+
+  #saved-items-container #saved-items ul li.saved-item .saved-item-name {
+  	margin-left: 183px;
+  	float: left;
+  }
+
+  #saved-items-container #saved-items ul li.saved-item .remove {
+  	line-height: 75px;
+  	float: right;
+  	margin-right: 20px;
+  }
+
+  #saved-items-container #saved-items ul li.saved-item .remove input {
+  	margin-right: 10px;
+  }
+
+  #saved-items-container #saved-items ul li.saved-item .remove label {
+  	font-weight: normal;
+  }
+
+
+
+
+
+  .carousel-navigation .prev { left: -25px;}
+  .carousel-navigation .next {right: -25px;}
+
+  .flex-direction-nav {display: none;}
+  .flexslider.poles .slides { /* height: 180px; overflow: hidden;  */}
+
+  #your-items-container {clear: both;}
+  #saved-items .saved-item-image {width: auto; height: 250px;}
+
+
+
+  #saved-items li.saved-item, #product-selection li.product {list-style: none;}
+
+
+  .saved-item-image {width: 150px; height: auto;}
+
+
+  #design-a-light-content #dal-navigation {
+  	border-bottom: 1px solid #cccccc;
+  	padding-top: 100px;
+  }
+
+  #design-a-light-content #dal-navigation .panel-switcher {
+  	text-decoration: none;
+  	display: block;
+  	border: 1px solid #c8c8c8;
+  	border-bottom: none;
+  	width: 175px;
+  	height: 33px;
+  	float: left;
+  	text-align: center;
+  	line-height: 30px;
+  	color: #757575;
+  	font-weight: normal;
+  }
+
+  #design-a-light-content #dal-navigation .panel-switcher:hover {
+  	text-decoration: none;
+  }
+
+  #design-a-light-content #dal-navigation .panel-switcher.active:after {content: ''; font-size: 0px; border-bottom: 2px solid white; position: absolute; bottom: -1px; width: 100%; height: 0px; left: 0px; }
+  #design-a-light-content #dal-navigation .panel-switcher.active {
+  	position: relative;
+  	border: 1px solid #888;
+  	border-bottom: none;
+  	font-weight: bold;
+  }
+  #dal-instructions { padding: 20px; background: rgba(0,0,0,.5); position: absolute; color: white; top: 100px; width: 80%; left: 10%; z-index: 10000; display: none;}
+
+
+  .slides li {overflow: hidden;}
+  .flex-active-slide {overflow: visible;}
+  .lefter {
+    @include breakpoint($tablet) { margin-left: -24px; }
+    @include breakpoint($desktop) { margin-left: 132px; }
+  }
+
+  .testimonial { margin-bottom: 40px; }
+  .testimonial-title { margin: 0px 0px 20px 0px; padding: 0px; }
+  .testimonial-body { margin: 0px 0px 20px 0px; padding: 0px; font-style: italic; }
+  .testimonial-body:before, .testimonial-body:after { content: '"';}
+  .testimonial-credit { font-size: 14px; margin: 0px 0px 20px 0px; padding: 0px; }
+  .testimonial-credit:before { content: '\2014'; margin-right: 5px;}
+
+
+  textarea { min-height: 200px; }
+
+  .product-image {
+    @include breakpoint($tablet) { min-height: 156px; }
+    @include breakpoint($desktop) { min-height: 151px; }
+    @include breakpoint($wide) { min-height: 195px; }
+  }
+
+
+}
+
+
+

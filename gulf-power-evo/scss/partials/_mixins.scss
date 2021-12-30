@@ -1,0 +1,139 @@
+// Things that may be used by several nodes
+@mixin slight-border($color: $light-grey, $position: bottom, $distance: 30px) {
+  border: {
+    @if $position == 'top' {
+      top: 0.05rem solid lighten($color, 15%);
+    }
+
+    @if $position == 'right' {
+      right: 0.05rem solid lighten($color, 15%);
+    }
+
+    @if $position == 'bottom' {
+      bottom: 0.05rem solid lighten($color, 15%);
+    }
+
+    @if $position == 'left' {
+      left: 0.05rem solid lighten($color, 15%);
+    }
+  }
+  margin: {
+    @if $position == 'top' {
+      top: $distance;
+    }
+
+    @if $position == 'right' {
+      right: $distance;
+    }
+
+    @if $position == 'bottom' {
+      bottom: $distance;
+    }
+
+    @if $position == 'left' {
+      left: $distance;
+    }
+  }
+  padding: {
+    @if $position == 'top' {
+      top: $distance;
+    }
+
+    @if $position == 'right' {
+      right: $distance;
+    }
+
+    @if $position == 'bottom' {
+      bottom: $distance;
+    }
+
+    @if $position == 'left' {
+      left: $distance;
+    }
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: ''; font-size: 0px; clear: both; display: table;
+  }
+}
+
+@mixin cols($cols, $breakpoint, $grid, $offset: 0) {
+  @for $i from 1 through $cols {
+    $t: $i - 1;
+    &:nth-child(#{$cols}n+#{$i+$offset}) {
+      @include breakpoint($breakpoint) {
+        @include grid-span(1/$cols * $grid, $t/$cols * $grid + 1, $grid);
+        @if $t == 0 {
+          @include clearfix;
+          clear: both !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin container($with-gutter: true) {
+  margin: auto;
+
+  @if $with-gutter {
+    width: $teensy - 35px;
+  } @else {
+    width: $teensy;
+  }
+
+  @include breakpoint($tiny) {
+    @if $with-gutter {
+      width: $tiny - 35px;
+    } @else {
+      width: $tiny;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    width: 708px;
+  }
+
+  @include breakpoint($regular) {
+    @if $with-gutter {
+      width: 930px;
+    } @else {
+      width: 960px;
+    }
+  }
+
+  @include breakpoint($wide) {
+    @if $with-gutter {
+      width: 1170px;
+    } @else {
+      width: 1200px;
+    }
+  }
+}
+
+@mixin shadow($color: rgba(0, 0, 0, 0.25)) {
+  &::before {
+    background-color: $color;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+@mixin adjustGutters {
+//   @include add-gutter(1.5, 1200px);
+}
+
+
+
+
+
+
+
+

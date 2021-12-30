@@ -1,0 +1,48 @@
+<div class="content-section basic-content-layout-2">
+  <h2>We Are Here to Help You</h2>
+  <div>
+    <section class="text-section">
+      <p>Speak to one of our dedicated business reps by calling <strong>1-800-225-5797</strong>, then <strong>Press "2"</strong> for Business or Commercial Accounts.</p>
+      <p>Dedicated Business Line Options:</p>
+      <p><strong>[ Press 1 ]:</strong> Use Automated Self Service to &ldquo;Report a Power Outage&rdquo; or &ldquo;Check Your Balance/Due Date of a Bill&rdquo;</p>
+      <p><strong>[ Press 2 ]:</strong> Request to speak with a representative directly</p>
+    </section>
+
+    <section class="text-section">
+      <img src="/images/illustrations/business/Image_Bus_SaveMoneyAndEnergyAtYourBusiness_1.png" alt="Illustration of business tools">
+    </section>
+  </div>
+</div>
+
+
+<section class="contact-form business-care-center-contact-us-form">
+  <div class="content-region" ng-hide="hideAfterValidSubmit">
+    <form name="businessCareCenterContactUsForm" method="post" id="BusinessContactForm" ng-submit="submitForm(businessCareCenterContactUsForm.$valid, businessCareCenterContactUsForm)" novalidate>
+      <h3>Fill out the form below and a representative will get back to you as soon as possible.</h3>
+      <fieldset>
+        <label>
+          <span class="title">Name * <span ng-show="businessCareCenterContactUsForm.users_name.$invalid && businessCareCenterContactUsForm.users_name.$dirty && !businessCareCenterContactUsForm.users_name.$error.required">Invalid</span><span ng-show="businessCareCenterContactUsForm.users_name.$error.required && businessCareCenterContactUsForm.$submitted">Required</span></span>
+          <input type="text" name="users_name" placeholder="Your name" ng-model="users_name" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+        </label>
+        <label>
+          <span class="title">Company * <span ng-show="businessCareCenterContactUsForm.company.$invalid && businessCareCenterContactUsForm.company.$dirty && !businessCareCenterContactUsForm.company.$error.required">Invalid</span><span ng-show="businessCareCenterContactUsForm.company.$error.required && businessCareCenterContactUsForm.$submitted">Required</span></span>
+          <input type="text" name="company" placeholder="Your company" ng-model="company" ng-required="true">
+        </label>
+        <label>
+          <span class="title">Email Address * <span ng-show="businessCareCenterContactUsForm.email_address.$invalid && businessCareCenterContactUsForm.email_address.$dirty && !businessCareCenterContactUsForm.email_address.$error.required">Invalid</span><span ng-show="businessCareCenterContactUsForm.email_address.$error.required && businessCareCenterContactUsForm.$submitted">Required</span></span>
+          <input type="email" name="email_address" placeholder="Your email" ng-model="email_address" ng-required="true">
+        </label>
+        <label>
+          <span class="title">Phone</span>
+          <input type="tel" name="phone_number" placeholder="123-456-7890" ng-model="phone_number">
+        </label>
+        <label class="message">
+          <span class="title">How can we help you? <span ng-show="businessCareCenterContactUsForm.message.$invalid && businessCareCenterContactUsForm.$dirty && businessCareCenterContactUsForm.$submitted">(Please shorten your message)</span></span>
+          <textarea name="message" rows="8" cols="40" placeholder="Message" ng-model="message" ng-maxlength="400" ng-focus="expandHeight($event)" ng-blur="collapseHeight($event)"></textarea>
+        </label>
+        <button role="button">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="fade-in content-region callout success" ng-show="thanksMessage">{{ thanksMessage }}</div>
+</section>

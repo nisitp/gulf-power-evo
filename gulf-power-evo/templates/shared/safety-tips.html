@@ -1,0 +1,31 @@
+<section class="safety-tip advert detail-section major-cta-section">
+  <div>
+    <div class="safety-tips-container">
+      <div
+        class="safety-tip"
+        ng-repeat="safetyTips in neededSafetyTips(safetyTips, tipIDs)">
+        <h5 ng-bind-html="'Safety Tip: ' + safetyTips.title"></h5>
+        <p ng-bind-html="safetyTips.description"></p>
+        <a href="/about-us/safety">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+
+<section ng-repeat="data in bannerData" ng-if="data.id == bannerDataID" class="advert detail-section major-cta-section" ng-style="{'background-image': data.imagePath}">
+  <div>
+    <h5 ng-bind-html="data.title" class="asdf{{getRandomSpan()}}"></h5>
+    <p ng-bind-html="data.description"></p>
+    <a
+      class="detour-link"
+      ng-if="data.linksTo"
+      ng-href="{{data.linksTo}}"
+      ng-attr-target="{{data.shouldOpenWithNewTab ? '_blank' : ''}}"
+
+  </div>
+</section>
+-->
+
+

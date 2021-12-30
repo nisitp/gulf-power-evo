@@ -1,0 +1,25 @@
+<section class="content-section text-section programs-and-rebates-section">
+  <div class="content-region">
+    <h2 ng-if="hideHeaderTitle != true" ng-bind="headerTitle || 'Additional Programs and Rebates'"></h2>
+    <p  ng-if="introCopy" ng-bind="introCopy" class="content-region"></p>
+  </div>
+  <div class="content-region programs detail-section">
+    <div class="programs-container">
+      <div
+        class="program"
+        ng-class="programRebate.saveAmount > 0 ? 'save-banner' : ''"
+        ng-repeat="programRebate in neededProgramsAndRebates(programsAndRebates, withIDs)"
+        ng-attr-data-program-rebate-id="{{programRebate.saveAmount > 0 ? 'Save up to $' + programRebate.saveAmount + '!' : ''}}">
+        <img ng-src="{{programRebate.headerPath}}" alt="Header photo">
+        <div class="program-content">
+          <a ng-href="{{programRebate.pageUrl}}" ng-attr-target="{{programRebate.shouldOpenWithNewTab ? '_blank' : ''}}">
+            <h5 ng-bind-html="programRebate.name"></h5>
+          </a>
+          <p ng-bind-html="programRebate.description"></p>
+        </div>
+      </div> <!-- .program -->
+    </div>
+    <span class="mobile-direction-nav"><a ng-hide="hideViewAllLink != false" class="ng-hide view-all-link" href="/residential/savings-and-energy/rebates-and-programs">View All</a><a href="#" class="nav-prev">&lt;</a><a href="#" class="nav-next">&gt;</a></span>
+    <a href="#" class="mobile-view-all">View All</a>
+  </div>
+</section>

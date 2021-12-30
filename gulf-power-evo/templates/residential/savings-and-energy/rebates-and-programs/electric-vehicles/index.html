@@ -1,0 +1,126 @@
+<div class="content-section basic-content-layout-2">
+  <h2>Get Current. Drive Electric.<sup>&trade;</sup></h2>
+  <div>
+    <section class="text-section">
+      <p>Electric vehicles combine performance, style, and efficiency to provide a great driving experience. They also offer a lower total cost of ownership. More and more drivers are enjoying the many benefits of going electric.</p>
+      <p>At Gulf Power, we&apos;re proud to support electric vehicle owners by offering:</p>
+      <ul>
+        <li>Electricity rates with low, off-peak prices to help EV owners save when they &ldquo;refuel&rdquo;</li>
+        <li>Rebates on chargers for your home (or business)</li>
+        <li>An expanding list of charging locations in Northwest Florida including fast chargers</li>
+      </ul>
+
+    </section>
+    <section class="text-section">
+      <img src="/images/illustrations/residential/Image_Res_ElectricVehicles_1.png" alt="Image_Res_ElectricVehicles_1" width="571" height="295">
+    </section>
+  </div>
+</div>
+
+<section class="text-section cta-section">
+  <div>
+    <h2>Our Electric Vehicle Charging Program</h2>
+    <div>
+      <h3>Home Charging Station Rebates</h3>
+      <p>Apply for $750 through Gulf Power&apos;s Electric Vehicle Charging Program after the purchase or lease of a qualifying Plug-In Electric vehicle and help offset some of the costs associated with installing a charging station in your home.</p>
+      <a class="button" href="https://gulf.eert.southerncompany.com/RenewOnline/OnlineApplication/GettingStarted.aspx?pid=69" target="_blank">Apply Now</a>
+<!--
+      <div id="electric-vehicles-application" class="modal-content mfp-hide">
+        <iframe id="ApplicationUrl" class="electric-vehicles application-iframe" src="https://gulf.eert.southerncompany.com/RenewOnline/OnlineApplication/GettingStarted.aspx?pid=69" frameborder="0" allowtransparency="true">&amp;lt;p&amp;gt;Application requires a browser that supports iframes.&amp;lt;/p&amp;gt;</iframe>
+      </div>
+      <button href="#electric-vehicles-application" class="modal-trigger">Apply Now</button>
+-->
+
+
+    </div>
+    <div>
+      <h3>Eligibility Requirements</h3>
+      <ul>
+        <li>Offer is available to all Gulf Power residential customers who purchase or lease a qualifying plug-in electric vehicle.</li>
+        <li>Eligible vehicles include new or pre-owned, highway capable Battery Electric (BEV), Plug-in Hybrid</li>
+        <li>Electric (PHEV), and Extended Range Electric (EREV) vehicles. Low speed electric vehicles (top speed of 35 mph) are not eligible for this incentive.</li>
+        <li>An itemized paid sales receipt must be submitted as proof of purchase.</li>
+        <li>A completed incentive application form must be submitted no more than 60 days after purchase or lease of qualifying vehicle.</li>
+        <li>This program is limited to the first 1,000 participants and expires on December 31, 2018.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<div class="content-section story-tiles layout-1">
+  <div>
+    <div class="tiles">
+      <div class="story-tile">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title">Federal Tax Credits</h3>
+          <p>We&apos;re not the only ones who want to reward you for purchasing and using an electric vehicle &mdash; you might also be eligible for a federal tax credit.</p>
+          <a href="http://www.afdc.energy.gov/laws/409" class="detour-link" target="_blank" title="External Link &mdash; Opens in a new tab">Learn More</a>
+        </div>
+      </div>
+
+      <div class="story-tile">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title">Check Rebate Status</h3>
+          <p>Already applied for a rebate? <a href="https://www.acbpromotions.com/gulfpower/Default.asp" target="_blank" title="External Link &mdash; Opens in a new tab">Check the status here.</a></p>
+        </div>
+      </div>
+
+      <div class="story-tile">
+        <div class="story-tile-content">
+          <h3 class="story-tile-title">For Dealerships</h3>
+          <p>Gulf Power is glad to partner with automotive dealers across Northwest Florida to provide them with helpful energy-related information that they can share with prospective buyers.</p>
+
+          <div id="contact-form" class="modal-content mfp-hide">
+            <div class="form-container">
+              <h2>Contact Us</h2>
+              <form name="evContactForm" method="post" id="ElectricVehicleDealer" ng-submit="submitForm(evContactForm.$valid, evContactForm)" novalidate ng-hide="hideAfterValidSubmit">
+                <label>
+                  <span class="title">Your Name * <span ng-show="
+                    evContactForm.yourname.$invalid
+                    && evContactForm.yourname.$error.required != true
+                    && evContactForm.$submitted
+                  ">Invalid</span><span ng-show="
+                    evContactForm.yourname.$error.required
+                    && evContactForm.$submitted
+                  ">Required</span></span>
+                  <input type="text" name="yourname" placeholder="Your Name" ng-model="yourname" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+                </label>
+                <label>
+                  <span class="title">Your Email Address * <span ng-show="
+                    evContactForm.email_address.$invalid
+                    && evContactForm.email_address.$error.required != true
+                    && evContactForm.$submitted
+                  ">Invalid</span><span ng-show="
+                    evContactForm.email_address.$error.required
+                    && evContactForm.$submitted
+                  ">Required</span></span>
+                  <input type="email" name="email_address" placeholder="Email Address" ng-model="email_address" ng-required="true">
+                </label>
+                <label class="message">
+                  <span class="title">Comments: <span class="red" ng-show="
+                    evContactForm.message.$invalid
+                    && evContactForm.$submitted
+                  ">(Please shorten your message)</span></span>
+                  <textarea name="message" rows="8" cols="40" ng-model="message" placeholder="Message" ng-maxlength="400"></textarea>
+                </label>
+                <button role="button">Submit</button>
+              </form>
+             	<div class="fade-in content-region callout success" ng-show="thanksMessage">{{ thanksMessage }}</div>
+            </div>
+          </div>
+
+          <a href="#contact-form" class="modal-trigger detour-link">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-include src="'templates/shared/banner.html'"
+  ng-init="bannerDataID = 3"
+></ng-include>
+
+<ng-include src="'templates/shared/programs-and-rebates.html'"
+  ng-init="headerTitle = 'Other Suggested Programs';withIDs = [13, 20, 16];hideViewAllLink=false;"
+></ng-include>

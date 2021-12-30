@@ -1,0 +1,68 @@
+// Colors
+$bright-silver: #f8f8f8;
+$dark-silver: #dee8ea;
+$silver: #e8f0f2;
+$light-grey: #ababab;
+$grey: #4d4d4d;
+$dark-grey: #3d3d3d;
+$text-grey: #6b6b6b;
+$blue-background: #225b9f;
+$blue: #095a9b;
+$silvery-blue: #e8f0f2;
+$red: #d8312b;
+$yellow: #eebc33;
+
+// Corporate Colors
+//Red Family
+$red-corp: #ec1c24;
+$red-medium-corp: #b1181e;
+$red-dark-corp: #6b0000;
+// Green Family
+$green-light-corp: #b2d235;
+$green-corp: #529736;
+$green-dark-corp: #00591d;
+// Blue Family
+$blue-light-corp: #00bcf1;
+$blue-corp: #007db9;
+$blue-dark-corp: #003a5d;
+// Orange Family
+$yellow-corp: #fdb714;
+$orange-corp: #f26322;
+$brown-corp: #652517;
+// Teal Family
+$teal-corp: #00b5af;
+$teal-medium-corp: #00746d;
+$teal-dark-corp: #004b45;
+// Gray Family
+$gray-light-corp: #e8e8e8;
+$gray-medium-corp: #959595;
+$gray-dark-corp: #4d4d4d;
+
+// Sizes
+$teensy: 320px;
+$teensy-only: 320px 500px;
+$tiny: 500px;
+$tiny-only: 500px 768px;
+
+$thin: 768px;
+$mobile-only: max-width 767px;
+$tablet: min-width 768px;
+$tablet-only: 768px 1023px;
+$tablet-down: max-width 1023px;
+$regular: 1024px;
+$desktop: min-width  1024px;
+$desktop-only: 1024px 1200px;
+$desktop-down: max-width 1200px;
+$wide: min-width 1200px;
+$very-wide: 1400px;
+
+$below-teensy: max-width $teensy - 1;
+$below-tiny: max-width $tiny - 1;
+$tiny-only: $tiny $thin - 1;
+$below-thin: max-width $thin - 1;
+$below-regular: max-width $regular - 1;
+$below-wide: max-width $wide - 1;
+$below-very-wide: max-width $very-wide - 1;
+
+// Fonts
+$main-stack: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;

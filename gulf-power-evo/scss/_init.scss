@@ -1,0 +1,21 @@
+@import "../bower_components/singularity/stylesheets/singularitygs";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+@import "partials/banners";
+@import "partials/fonts";
+@import "partials/mixins";
+@import "partials/preferences";
+@import "partials/extensions";
+@import "partials/testimonials";
+@import "partials/content-templates";
+@import "partials/design-a-light";
+
+
+* {
+  @include add-grid(3);
+  @include add-grid(6 at $tablet);
+  @include add-grid(12 at $desktop);
+  @include add-gutter(1/3 at $tablet);
+  @include add-gutter(.42 at $desktop);
+
+}

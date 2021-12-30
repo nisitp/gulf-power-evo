@@ -1,0 +1,26 @@
+@using System.Web;
+
+@{
+  var cacheFilename = Server.MapPath("~") + "data/weatherData.json";
+
+  @* Either return cached weather data or cache weather data *@
+  if (HttpContext.Current.Request.HttpMethod == "GET") {
+    // Look for cached weather data and either return it or
+    // tell the client to post new data for other clients
+    Response.ContentType = "application/json";
+    if (File.Exists(cacheFilename)) {
+      @Html.Raw(File.ReadAllText(cacheFilename));
+    }
+  }
+
+  if (HttpContext.Current.Request.HttpMethod == "POST") {
+    Response.ContentType = "text/plain";
+    Response.Write(Request.Form);
+
+    // Save the weather data the client is providing
+    // so it can be returned to other clients
+    if (File.Exists(cacheFilename)) {
+      File.WriteAllText(cacheFilename, Server.UrlDecode(Convert.ToString(Request.Form)));
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "gulfpower-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arcrammer/GulfPower-PoC.git"
+  },
+  "author": "Alexander Rhett Crammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arcrammer/GulfPower-PoC/issues"
+  },
+  "homepage": "https://github.com/Arcrammer/GulfPower-PoC#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-cache-bust": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-delete-file": "^1.0.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.6",
+    "gulp-zip": "^3.2.0",
+    "lossy-imagemin": "0.0.3",
+    "singularity": "0.0.12"
+  }
+}

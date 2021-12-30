@@ -1,0 +1,82 @@
+<script src="/js/tips.js"></script>
+<div class="content-section basic-content-layout-1">
+  <div>
+    <section class="text-section">
+      <h2>Explore Your Bill</h2>
+        <h3>Roll your mouse over the red dots to learn more.</h3>      
+    </section>  
+  </div>
+</div>
+
+<div class="content-section basic-content-layout-1 bill-demo-section">
+  <div>
+      <div id="bill-demo">
+        <a class="back-front-toggler" href="#">
+          <span class="view-back-page">View Back Page</span>
+          <span class="view-front-page hidden">View Front Page</span>
+<!--
+          <img class="view-back-page hidden" src="/images/back.png" alt="View Back Page" width="113" height="25" border="0" align="right">
+          <img class="view-front-page" src="/images/front.png" alt="View Front Page" width="113" height="25" border="0" align="right">
+-->
+        </a>
+
+
+        <div id="bill-front-container">
+          <img src="/images/bill_front_noNumbers.png" id="bill-front" usemap="#bill-front">
+          <!--// updated Dec 2015 //-->
+          <map name="bill-front" id="bill-front">
+  			<area shape="rect" coords="167,53,273,82" class="hotspot" onmouseover="tooltip.show('<h3>Customer Name</h3>Name associated with the service account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="331,54,410,80" class="hotspot" onmouseover="tooltip.show('<h3>Account Number</h3>Unique identifier for this customer at this address');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="428,24,518,47" class="hotspot" onmouseover="tooltip.show('<h3>Payment Due Date</h3>Date current electric service is due');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="430,51,503,71" class="hotspot" onmouseover="tooltip.show('<h3>Total Amount Due</h3>Reflects all current and past due charges');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="333,101,411,131" class="hotspot" onmouseover="tooltip.show('<h3>Service Period Dates</h3>Period of time between bills and meter readings');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="353,166,406,186" class="hotspot" onmouseover="tooltip.show('<h3>Previous Account Balance</h3>Amount due for previous service period dates');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="353,227,405,248" class="hotspot" onmouseover="tooltip.show('<h3>Current Electric Service Amount</h3>Cost to generate and distribute electricity');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="35,208,138,248" class="hotspot" onmouseover="tooltip.show('<h3>Total Amount Due</h3>Reflects all current and past due charges');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="22,107,106,134" class="hotspot" onmouseover="tooltip.show('<h3>Service Address</h3>Location where electricity is being provided');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="432,139,520,160" class="hotspot" onmouseover="tooltip.show('<h3>Account Number</h3>Unique identifier for this customer at this address');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="528,136,616,161" class="hotspot" onmouseover="tooltip.show('<h3>Web Access Code</h3>Use with account number to sign into online account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="438,170,518,195" class="hotspot" onmouseover="tooltip.show('<h3>Customer Service Phone Number</h3>Call this number if you need to contact Gulf Power');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="528,165,630,195" class="hotspot" onmouseover="tooltip.show('<h3>Power Outage Reporting Phone Number</h3>Call this number to report a power outage in your area');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="412,258,505,293" class="hotspot" onmouseover="tooltip.show('<h3>Payment Address</h3>Location to send the payment for this bill');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="411,302,506,346" class="hotspot" onmouseover="tooltip.show('<h3>Local Office Address</h3>Address of the Gulf Power local office serving this account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="413,385,633,483" class="hotspot" onmouseover="tooltip.show('<h3>Historical Usage Data</h3>Monthly energy usage trend at this location');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="23,491,405,571" class="hotspot" onmouseover="tooltip.show('<h3>Bill Message</h3>Important information that can benefit our customers');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="412,591,548,611" class="hotspot" onmouseover="tooltip.show('<h3>Account Number</h3>Unique identifier for this customer at this address');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="433,614,518,633" class="hotspot" onmouseover="tooltip.show('<h3>Payment Due Date</h3>Date current electric service is due');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="431,641,502,664" class="hotspot" onmouseover="tooltip.show('<h3>Total Amount Due</h3>Reflects all current and past due charges');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="20,746,122,759" class="hotspot" onmouseover="tooltip.show('<h3>Customer Name</h3>Name associated with the service account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="37,761,144,783" class="hotspot" onmouseover="tooltip.show('<h3>Mailing Address</h3>Address on file for correspondences');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="326,725,413,781" class="hotspot" onmouseover="tooltip.show('<h3>Payment Address</h3>Location to send the payment for this bill');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="0,586,33,617" class="hotspot" onmouseover="tooltip.show('<h3>Payment Stub</h3>Please return this portion with payment');" onmouseout="tooltip.hide();">
+  		</map>
+        </div>
+
+
+        <div id="bill-back-container" class="hidden">
+          <img src="/images/bill_back_noNumbers.png" id="bill-back" usemap="#bill-back">
+          <!--// updated Dec 2015 //-->
+          <map name="bill-back" id="bill-back">
+  		<area shape="rect" coords="168,55,273,83" class="hotspot" onmouseover="tooltip.show('<h3>Customer Name</h3>Name associated with the service account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="330,54,411,82" class="hotspot" onmouseover="tooltip.show('<h3>Account Number</h3>Unique identifier for this customer at this address');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="431,26,515,46" class="hotspot" onmouseover="tooltip.show('<h3>Payment Due Date</h3>Date current electric service is due');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="431,53,504,72" class="hotspot" onmouseover="tooltip.show('<h3>Total Amount Due</h3>Reflects all current and past due charges');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="23,152,92,172" class="hotspot" onmouseover="tooltip.show('<h3>Service Period Dates</h3>Period of time between bills and meter readings');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="99,153,142,175" class="hotspot" onmouseover="tooltip.show('<h3>Meter Number</h3>Unique identifier associated with your electric meter');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="23,181,41,200" class="hotspot" onmouseover="tooltip.show('<h3>Meter Reading</h3>Readings normally conducted once a month');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="209,152,409,176" class="hotspot" onmouseover="tooltip.show('<h3>kWh Usage</h3>The difference between the current and previous meter reading multiplied by the meter constant');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="179,116,309,132" class="hotspot" onmouseover="tooltip.show('<h3>Rate Name</h3>Determines how the bill is calculated for this account');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="23,131,224,148" class="hotspot" onmouseover="tooltip.show('<h3>Next Scheduled Read Date</h3>Date next meter reading will take place');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="22,217,41,236" class="hotspot" onmouseover="tooltip.show('<h3>Detailed List of Charges</h3>Breakdown of charges owed by the customer');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="45,208,107,221" class="hotspot" onmouseover="tooltip.show('<h3>Base Charge</h3>Cost of operations and maintenance for service');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="415,104,629,325" class="hotspot" onmouseover="tooltip.show('<h3>Convenient Payment Program and/or Additional Bill Message</h3>Information on ways to pay this bill and important information that can benefit our customers');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="45,222,116,235" class="hotspot" onmouseover="tooltip.show('<h3>Energy Charge</h3>Cost of producing and distributing electricity');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="45,236,110,249" class="hotspot" onmouseover="tooltip.show('<h3>Fuel Charge</h3>Cost of fuel used to generate electricity');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="21,266,172,308" class="hotspot" onmouseover="tooltip.show('<h3>Electricity Tax</h3>Taxes Gulf Power is required to collect');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="202,305,411,331" class="hotspot" onmouseover="tooltip.show('<h3>Total Amount Due</h3>Reflects all current and past due charges');" onmouseout="tooltip.hide();">
+  			<area shape="rect" coords="414,528,623,565" class="hotspot" onmouseover="tooltip.show('<h3>Consumer Check Conversion</h3>Displays the check conversion disclosure');" onmouseout="tooltip.hide();">
+  		</map>
+        </div>
+      </div>
+  </div>
+</div>

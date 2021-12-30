@@ -1,0 +1,329 @@
+<section class="contact-form sign-up-form commercial-surge-protection-sign-up-form" ng-controller="FormController">
+  <div class="content-region">
+    <h2>Sign up for Commercial Surge Protection</h2>
+    <form name="commercialSurgeProtectionForm" method="post" novalidate>
+      <label>
+        <span class="title">Account Name</span>
+        <input type="text" name="accountName" placeholder="Account Name" ng-model="accountName">
+      </label>
+      <label>
+        <span class="title">Doing Business As</span>
+        <input type="text" name="businessAs" placeholder="Doing Business As" ng-model="businessAs">
+      </label>
+      <label class="gulf-power-account-number">
+        <span class="title">Gulf Power Account Number * <span ng-show="
+          commercialSurgeProtectionForm.accountNumber1.$invalid
+          && commercialSurgeProtectionForm.accountNumber1.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.accountNumber1.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input
+          type="text"
+          name="accountNumber1"
+          placeholder="#### - ####"
+          ng-model="accountNumber1"
+          ng-model-options="{allowInvalid:'true'}"
+          ng-change="hyphenate('accountNumber1', [4]);trim('accountNumber1', 8)"
+          ng-pattern="accountNumberPattern"
+          ng-required="true"
+        >
+      </label>
+      <label>
+        <span class="title">Service Address * <span ng-show="
+          commercialSurgeProtectionForm.serviceAddressLine1.$invalid
+          && commercialSurgeProtectionForm.serviceAddressLine1.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.serviceAddressLine1.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="serviceAddressLine1" placeholder="Address Line 1" ng-model="address_line_1" ng-required="true">
+      </label>
+      <label>
+        <span class="title">Service Address (Line 2)</span>
+        <input type="text" name="serviceAddressLine2" ng-model="address_line_2" placeholder="Address (Line 2)">
+      </label>
+      <label class="city">
+        <span class="title">City * <span ng-show="
+          commercialSurgeProtectionForm.city.$invalid
+          && commercialSurgeProtectionForm.city.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.city.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input type="text" name="city" placeholder="City" ng-model="city" ng-pattern="/[a-zA-Z-\s]+/" ng-required="true">
+      </label>
+      <label class="state">
+        <span class="title">State *</span>
+        <select name="serviceState">
+          <option value="FL" selected>Florida</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DC">District of Columbia</option>
+          <option value="DE">Delaware</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </label>
+      <label class="zip">
+        <span class="title">ZIP Code * <span ng-show="
+          commercialSurgeProtectionForm.serviceZIP.$invalid
+          && commercialSurgeProtectionForm.serviceZIP.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.serviceZIP.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input
+          type="text"
+          name="serviceZIP"
+          placeholder="ZIP Code"
+          ng-model-options="{allowInvalid:'true'}"
+          ng-model="serviceZIP"
+          ng-pattern="zipCodePattern"
+          ng-change="hyphenate('serviceZIP', [5]);trim('serviceZIP', 9)"
+          ng-required="true"
+        >
+      </label>
+      <label class="row-beginning">
+        <span class="title">County</span>
+        <input type="text" name="serviceCounty" placeholder="County" ng-model="serviceCounty">
+      </label>
+      <label class="row-beginning">
+        <span class="title">Billing Address <span ng-show="
+          commercialSurgeProtectionForm.billingAddressLine1.$invalid
+          && commercialSurgeProtectionForm.$submitted
+          || commercialSurgeProtectionForm.billingAddressLine1.$empty
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span></span>
+        <input type="text" name="billingAddressLine1" placeholder="Address Line 1" ng-model="billingAddressLine1">
+      </label>
+      <label>
+        <span class="title">Billing Address (Line 2)</span>
+        <input type="text" name="billingAddressLine2" ng-model="billingAddressLine2" placeholder="Billing Address (Line 2)">
+      </label>
+      <label class="city">
+        <span class="title">Billing City <span ng-show="
+          commercialSurgeProtectionForm.billingCity.$invalid
+          && commercialSurgeProtectionForm.$submitted
+          || commercialSurgeProtectionForm.billingCity.$empty
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span></span>
+        <input type="text" name="billingCity" placeholder="City" ng-model="billingCity" ng-pattern="/[a-zA-Z-\s]+/">
+      </label>
+      <label class="state">
+        <span class="title">Billing State</span>
+        <select name="billingState">
+          <option value="FL" selected>Florida</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DC">District of Columbia</option>
+          <option value="DE">Delaware</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </label>
+
+      <label class="zip">
+        <span class="title">Billing ZIP Code <span ng-show="
+          commercialSurgeProtectionForm.billingZIP.$invalid
+          && commercialSurgeProtectionForm.$submitted
+          || commercialSurgeProtectionForm.billingZIP.$empty
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span></span>
+        <input
+          type="text"
+          name="billingZIP"
+          placeholder="ZIP Code"
+          ng-model-options="{allowInvalid:'true'}"
+          ng-model="billingZIP"
+          ng-pattern="zipCodePattern"
+          ng-change="hyphenate('serviceZIP', [5]);trim('serviceZIP', 9)"
+        >
+      </label>
+      <label class="row-beginning">
+        <span class="title">Contact Name</span>
+        <input type="text" name="contactName" placeholder="Contact Name" ng-model="contactName">
+      </label>
+      <label>
+        <span class="title">Email Address</span>
+        <input type="email" name="emailAddress" placeholder="Email Address" ng-model="emailAddress">
+      </label>
+      <label>
+        <span class="title">Contact Phone Number * <span ng-show="
+          commercialSurgeProtectionForm.phoneNumber.$invalid
+          && commercialSurgeProtectionForm.phoneNumber.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.phoneNumber.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input
+          type="tel"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          ng-model-options="{allowInvalid:'true'}"
+          ng-model="phoneNumber"
+          ng-pattern="phoneNumberPattern"
+          ng-change="hyphenate('phoneNumber', [3, 7]);trim('phoneNumber', 11)"
+          ng-required="true"
+        >
+      </label>
+      <label>
+        <span class="title">Contact Fax Number * <span ng-show="
+          commercialSurgeProtectionForm.faxNumber.$invalid
+          && commercialSurgeProtectionForm.faxNumber.$error.required != true
+          && commercialSurgeProtectionForm.$submitted
+        ">Invalid</span><span ng-show="
+          commercialSurgeProtectionForm.faxNumber.$error.required
+          && commercialSurgeProtectionForm.$submitted
+        ">Required</span></span>
+        <input
+          type="tel"
+          name="faxNumber"
+          placeholder="Fax Number"
+          ng-model-options="{allowInvalid:'true'}"
+          ng-model="faxNumber"
+          ng-pattern="phoneNumberPattern"
+          ng-change="hyphenate('faxNumber', [3, 7]);trim('faxNumber', 11)"
+          ng-required="true"
+        >
+      </label>
+      <label class="alternate-layout-1 wants-commercial-surge-protection-container">
+        <span class="title">Yes, I want Commercial Surge Protection from Gulf Power!</span>
+        <input type="checkbox" name="wantsCommercialSurgeProtection" value="true">
+      </label>
+      <label class="alternate-layout-1 protect-multiple-meters-or-accounts">
+        <span class="title">I would like to protect multiple meters or accounts</span>
+        <label>
+          <span class="title">Yes</span>
+          <input type="radio" name="wantsMeterOrAccountProtection" value="true" ng-click="showExtraFields('.extra-account-number-fields')">
+        </label>
+        <label>
+          <span class="title">No</span>
+          <input type="radio" name="wantsMeterOrAccountProtection" value="false" ng-click="hideExtraFields('.extra-account-number-fields')" checked>
+        </label>
+      </label>
+      <div class="extra-fields extra-account-number-fields">
+        <label>
+          <span class="title">Account Number 2</span>
+          <input type="text" name="extraAccountNumber2" ng-model="extraAccountNumber2" placeholder="#### - ####" ng-model="extraAccountNumber2">
+        </label>
+        <label>
+          <span class="title">Account Number 3</span>
+          <input type="text" name="extraAccountNumber3" ng-model="extraAccountNumber3" placeholder="#### - ####" ng-model="extraAccountNumber3">
+        </label>
+        <label>
+          <span class="title">Account Number 4</span>
+          <input type="text" name="extraAccountNumber4" ng-model="extraAccountNumber4" placeholder="#### - ####" ng-model="extraAccountNumber4">
+        </label>
+        <label>
+          <span class="title">Account Number 5</span>
+          <input type="text" name="extraAccountNumber5" ng-model="extraAccountNumber5" placeholder="#### - ####" ng-model="extraAccountNumber5">
+        </label>
+        <label class="alternate-layout-1">
+          <span class="title">More Than 5 Accounts</span>
+          <input type="checkbox" name="has_more_than_5_accounts" value="true" ng-click="toggleExtraFields('.account-amount-field')">
+        </label>
+        <div class="extra-fields account-amount-field">
+          <label>
+            <span class="title">Total Account Amount</span>
+            <input type="text" name="account_amount" min="0" placeholder="0"></input>
+          </label>
+        </div> <!-- .extra-fields -->
+      </div> <!-- .extra-fields -->
+      <button role="button">Submit</button>
+    </form>
+  </div>
+</section>
